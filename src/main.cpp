@@ -21,7 +21,7 @@
 // TODO: README.md написать 
 // вопрос: как сделать ссылку на доксиген
 
-int main(int argc, char** argv)
+int main()
 {
     double a = NAN, b = NAN, c = NAN;
 

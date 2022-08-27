@@ -6,7 +6,7 @@
 
 const double EPS = 1e-8;
 
-double solve_linear_equation(double b, double c, equation *t)
+void solve_linear_equation(double b, double c, equation *t)
 {
     assert(t != nullptr && "Ptrs must not be NULL");
     
@@ -65,5 +65,5 @@ int is_equal(double x, double y)
     assert(x != NAN);
     assert(y != NAN);
 
-    return (fabs(x-y) < EPS);
+    return fabs(x-y) < EPS;
 }

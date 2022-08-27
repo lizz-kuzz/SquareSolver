@@ -4,7 +4,7 @@
 #include "../include/input_output_equation.h"
 #include "../include/utils.h"
 
-double input_coeff(double *a, double *b, double *c)
+void input_coeff(double *a, double *b, double *c)
 {
     assert(a != nullptr && "Ptrs must not be NULL");
     assert(b != nullptr && "Ptrs must not be NULL");
@@ -19,7 +19,7 @@ double input_coeff(double *a, double *b, double *c)
         if (scanf("%lg %lg %lg", a, b, c) != 3)
         {
             printf("try again, you entered an incorrect value\n");
-            getchar() != '\n';         
+            clear_input_buff();
         }
         else 
         {
@@ -45,9 +45,9 @@ int is_continue_quadratic_equation_solver(double a, double b, double c)
         
         int err = scanf("%d", &number_for_continue); 
 
-        if ((err != 1) && (number_for_continue != 1 || number_for_continue != 0))
+        if (err != 1 && number_for_continue != 1 && number_for_continue != 0)
         {
-            getchar() != '\n';
+            clear_input_buff();
             printf("try again, you entered an incorrect value\n");
         }
         else
@@ -78,4 +78,9 @@ void output_solutions(equation square)
         default:
                 printf("Error default switch in fucntion output_solutions");
     }
+}
+
+void clear_input_buff()
+{
+    while (getchar() != '\n') {}
 }

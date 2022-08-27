@@ -26,8 +26,8 @@ int call_test(double a, double b, double c, int number_of_roots, double x_1, dou
 
     solve_square_equation(a, b, c, &square);
 
-    if (!(square.number_of_roots == number_of_roots && \
-        ((is_equal(square.x_1, x_1) && is_equal(square.x_2, x_2)))))
+    if (square.number_of_roots != number_of_roots || \
+        !is_equal(square.x_1, x_1) || !is_equal(square.x_2, x_2))
     {
         test_solve_square_add(square, number_of_roots, x_1, x_2);
 
@@ -54,16 +54,19 @@ void test_solve_square()
 
 void test_from_file()
 {
-    printf("OK!");
     FILE *finput = nullptr;
 
     finput = fopen(INPUT_FILE_WITH_TESTS, "r");
 
     if (finput != nullptr)
+    {
         printf("Succes\n");
+    }    
     else 
+    {
         printf("File not found\n");
-
+        return;
+    }
     double massiv_tests[LINE][COLUMN] = {}; 
 
     for (int i = 0; i < LINE; i++)
@@ -78,7 +81,7 @@ void test_from_file()
     for (int i = 0; i < LINE; i++)
     {
         ok_test += call_test(massiv_tests[i][0], massiv_tests[i][1], massiv_tests[i][2],
-                             massiv_tests[i][3], massiv_tests[i][4], massiv_tests[i][5]); 
+                             (int)massiv_tests[i][3], massiv_tests[i][4], massiv_tests[i][5]); 
     }
 
     printf("passed %d/6 checks\n", ok_test);

@@ -9,7 +9,7 @@
 /// @param [in] equation gets the structure
 /// @note solves the linear case of the quadratic equation
 //---------------------------------------------
-double solve_linear_equation(double b, double c, equation *t);
+void solve_linear_equation(double b, double c, equation *t);
 
 //---------------------------------------------
 /// @param [in] a coefficient equation

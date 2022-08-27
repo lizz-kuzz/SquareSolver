@@ -18,7 +18,7 @@ int is_continue_quadratic_equation_solver(double a, double b, double c);
 /// @param [in] c adress coefficient equation
 /// @note gets the coefficients of the equation
 //---------------------------------------------
-double input_coeff(double *a, double *b, double *c);
+void input_coeff(double *a, double *b, double *c);
 
 //---------------------------------------------
 /// @param [in] equation gets the structure
@@ -26,4 +26,5 @@ double input_coeff(double *a, double *b, double *c);
 //---------------------------------------------
 void output_solutions(equation square);
 
+void clear_input_buff();
 #endif
