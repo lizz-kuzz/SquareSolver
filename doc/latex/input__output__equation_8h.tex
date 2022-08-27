@@ -1,0 +1,68 @@
+\doxysection{input\+\_\+output\+\_\+equation.\+h File Reference}
+\label{input__output__equation_8h}\index{input\_output\_equation.h@{input\_output\_equation.h}}
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ is\+\_\+continue\+\_\+quadratic\+\_\+equation\+\_\+solver} (double a, double b, double c)
+\item 
+double \textbf{ input\+\_\+coeff} (double $\ast$a, double $\ast$b, double $\ast$c)
+\item 
+void \textbf{ output\+\_\+solutions} (\textbf{ equation} square)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{input__output__equation_8h_a9b71259761fbf8ddfe8304100dbe47db}} 
+\index{input\_output\_equation.h@{input\_output\_equation.h}!input\_coeff@{input\_coeff}}
+\index{input\_coeff@{input\_coeff}!input\_output\_equation.h@{input\_output\_equation.h}}
+\doxysubsubsection{input\_coeff()}
+{\footnotesize\ttfamily double input\+\_\+coeff (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & adress coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & adress coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & adress coefficient equation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+gets the coefficients of the equation 
+\end{DoxyNote}
+\mbox{\label{input__output__equation_8h_a97218869ff9869f48db9f2a36b0e57af}} 
+\index{input\_output\_equation.h@{input\_output\_equation.h}!is\_continue\_quadratic\_equation\_solver@{is\_continue\_quadratic\_equation\_solver}}
+\index{is\_continue\_quadratic\_equation\_solver@{is\_continue\_quadratic\_equation\_solver}!input\_output\_equation.h@{input\_output\_equation.h}}
+\doxysubsubsection{is\_continue\_quadratic\_equation\_solver()}
+{\footnotesize\ttfamily int is\+\_\+continue\+\_\+quadratic\+\_\+equation\+\_\+solver (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & coefficient equation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 1 if the coefficients are correct and 0 if the user wants to change the values 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+checks the correctness of the entered coefficients 
+\end{DoxyNote}
+\mbox{\label{input__output__equation_8h_a7f7545f53afacfc6a2454277a645052a}} 
+\index{input\_output\_equation.h@{input\_output\_equation.h}!output\_solutions@{output\_solutions}}
+\index{output\_solutions@{output\_solutions}!input\_output\_equation.h@{input\_output\_equation.h}}
+\doxysubsubsection{output\_solutions()}
+{\footnotesize\ttfamily void output\+\_\+solutions (\begin{DoxyParamCaption}\item[{\textbf{ equation}}]{square }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em equation} & gets the structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+outputs solutions of the equation s with the entered coefficients 
+\end{DoxyNote}

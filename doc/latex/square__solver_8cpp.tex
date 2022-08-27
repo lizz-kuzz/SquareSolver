@@ -1,0 +1,90 @@
+\doxysection{square\+\_\+solver.\+cpp File Reference}
+\label{square__solver_8cpp}\index{square\_solver.cpp@{square\_solver.cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}square\+\_\+solver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \textbf{ solve\+\_\+linear\+\_\+equation} (double b, double c, \textbf{ equation} $\ast$t)
+\item 
+void \textbf{ solve\+\_\+square\+\_\+equation} (double a, double b, double c, \textbf{ equation} $\ast$t)
+\item 
+int \textbf{ is\+\_\+equal} (double x, double y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \textbf{ EPS} = 1e-\/8
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{square__solver_8cpp_a08d6bb06d6a0cd54a87d3f84d4cd8227}} 
+\index{square\_solver.cpp@{square\_solver.cpp}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!square\_solver.cpp@{square\_solver.cpp}}
+\doxysubsubsection{is\_equal()}
+{\footnotesize\ttfamily int is\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & coefficient equation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the comparison is true 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+compares two numbers for equality 
+\end{DoxyNote}
+\mbox{\label{square__solver_8cpp_adad2e7b0d2781e51658044f9a1f71125}} 
+\index{square\_solver.cpp@{square\_solver.cpp}!solve\_linear\_equation@{solve\_linear\_equation}}
+\index{solve\_linear\_equation@{solve\_linear\_equation}!square\_solver.cpp@{square\_solver.cpp}}
+\doxysubsubsection{solve\_linear\_equation()}
+{\footnotesize\ttfamily double solve\+\_\+linear\+\_\+equation (\begin{DoxyParamCaption}\item[{double}]{b,  }\item[{double}]{c,  }\item[{\textbf{ equation} $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em equation} & gets the structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+solves the linear case of the quadratic equation 
+\end{DoxyNote}
+\mbox{\label{square__solver_8cpp_a53f94c8817ed41edd22f13eda1577141}} 
+\index{square\_solver.cpp@{square\_solver.cpp}!solve\_square\_equation@{solve\_square\_equation}}
+\index{solve\_square\_equation@{solve\_square\_equation}!square\_solver.cpp@{square\_solver.cpp}}
+\doxysubsubsection{solve\_square\_equation()}
+{\footnotesize\ttfamily void solve\+\_\+square\+\_\+equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{\textbf{ equation} $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em equation} & gets the structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+solves the classical quadratic equation 
+\end{DoxyNote}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{square__solver_8cpp_afe01386a82fedc016455a43c20280a97}} 
+\index{square\_solver.cpp@{square\_solver.cpp}!EPS@{EPS}}
+\index{EPS@{EPS}!square\_solver.cpp@{square\_solver.cpp}}
+\doxysubsubsection{EPS}
+{\footnotesize\ttfamily const double EPS = 1e-\/8}
+

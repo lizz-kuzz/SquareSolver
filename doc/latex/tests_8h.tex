@@ -1,0 +1,75 @@
+\doxysection{tests.\+h File Reference}
+\label{tests_8h}\index{tests.h@{tests.h}}
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ test\+\_\+solve\+\_\+square} ()
+\item 
+int \textbf{ call\+\_\+test} (double a, double b, double c, int number\+\_\+of\+\_\+roots, double x\+\_\+1, double x\+\_\+2)
+\item 
+void \textbf{ test\+\_\+solve\+\_\+square\+\_\+add} (\textbf{ equation} square, int number\+\_\+of\+\_\+roots, double x\+\_\+1, double x\+\_\+2)
+\item 
+void \textbf{ test\+\_\+from\+\_\+file} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{tests_8h_af5efe469f4287d5c00ba4e632b3b1ebc}} 
+\index{tests.h@{tests.h}!call\_test@{call\_test}}
+\index{call\_test@{call\_test}!tests.h@{tests.h}}
+\doxysubsubsection{call\_test()}
+{\footnotesize\ttfamily int call\+\_\+test (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{int}]{number\+\_\+of\+\_\+roots,  }\item[{double}]{x\+\_\+1,  }\item[{double}]{x\+\_\+2 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em number\+\_\+of\+\_\+roots} & number of expected roots \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+1} & expected root \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+2} & expected root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the check is passed 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+calls the solve function to check its operation 
+\end{DoxyNote}
+\mbox{\label{tests_8h_a506f73eb45ea9236492a8ad0305d6cc8}} 
+\index{tests.h@{tests.h}!test\_from\_file@{test\_from\_file}}
+\index{test\_from\_file@{test\_from\_file}!tests.h@{tests.h}}
+\doxysubsubsection{test\_from\_file()}
+{\footnotesize\ttfamily void test\+\_\+from\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+reads coefficients and roots from the file and checks the function operation 
+\end{DoxyNote}
+\mbox{\label{tests_8h_a7ab82a59d3c5642d7b9c0c48a78935d4}} 
+\index{tests.h@{tests.h}!test\_solve\_square@{test\_solve\_square}}
+\index{test\_solve\_square@{test\_solve\_square}!tests.h@{tests.h}}
+\doxysubsubsection{test\_solve\_square()}
+{\footnotesize\ttfamily void test\+\_\+solve\+\_\+square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+text the function of solving a quadratic equation 
+
+he function calls a check of the operation of the quadratic equation solution function 
+
+outputs the number of passed checks 
+\end{DoxyNote}
+\mbox{\label{tests_8h_a4c1aefbefc44ac64e6cb02d13ddd0e7e}} 
+\index{tests.h@{tests.h}!test\_solve\_square\_add@{test\_solve\_square\_add}}
+\index{test\_solve\_square\_add@{test\_solve\_square\_add}!tests.h@{tests.h}}
+\doxysubsubsection{test\_solve\_square\_add()}
+{\footnotesize\ttfamily void test\+\_\+solve\+\_\+square\+\_\+add (\begin{DoxyParamCaption}\item[{\textbf{ equation}}]{square,  }\item[{int}]{number\+\_\+of\+\_\+roots,  }\item[{double}]{x\+\_\+1,  }\item[{double}]{x\+\_\+2 }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+displays an error message in the verification 
+\end{DoxyNote}

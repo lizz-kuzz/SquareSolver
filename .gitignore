@@ -1,3 +1,6 @@
-doc/
-Doxyfile
 *.exe
+src/
+include/
+res/
+*.md
+Makefile

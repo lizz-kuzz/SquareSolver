@@ -1,0 +1,203 @@
+\doxysection{squaresolver\+\_\+add.\+cpp File Reference}
+\label{squaresolver__add_8cpp}\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Square\+Solver\+\_\+add\+\_\+func.\+hpp\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ EPS}~1e-\/8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \textbf{ input\+\_\+coefficients} (double $\ast$a, double $\ast$b, double $\ast$c)
+\item 
+int \textbf{ true\+\_\+coefficients} (double a, double b, double c)
+\item 
+double \textbf{ line\+\_\+solve} (double a, double b, double c, \textbf{ equation} $\ast$t)
+\item 
+void \textbf{ square\+\_\+solve} (double a, double b, double c, \textbf{ equation} $\ast$t)
+\item 
+void \textbf{ solve} (double a, double b, double c, \textbf{ equation} $\ast$t)
+\item 
+void \textbf{ output\+\_\+solutions} (\textbf{ equation} square)
+\item 
+bool \textbf{ compare} (double x, double y)
+\item 
+void \textbf{ test\+\_\+solve\+\_\+square\+\_\+add} (\textbf{ equation} square, int num\+\_\+roots, double x\+\_\+1, double x\+\_\+2)
+\begin{DoxyCompactList}\small\item\em displays an error message \end{DoxyCompactList}\item 
+void \textbf{ call\+\_\+test} (double a, double b, double c, int num\+\_\+roots, double x\+\_\+1, double x\+\_\+2)
+\item 
+void \textbf{ test\+\_\+solve\+\_\+square} ()
+\begin{DoxyCompactList}\small\item\em tests the function of solving a quadratic equation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{squaresolver__add_8cpp_a6ebf6899d6c1c8b7b9d09be872c05aae}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!EPS@{EPS}}
+\index{EPS@{EPS}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{EPS}
+{\footnotesize\ttfamily \#define EPS~1e-\/8}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{squaresolver__add_8cpp_aead09ce0242fa8de2ef3f4ee1934d908}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!call\_test@{call\_test}}
+\index{call\_test@{call\_test}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{call\_test()}
+{\footnotesize\ttfamily void call\+\_\+test (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{int}]{num\+\_\+roots,  }\item[{double}]{x\+\_\+1,  }\item[{double}]{x\+\_\+2 }\end{DoxyParamCaption})}
+
+calls the solve function to check its operation 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+\_\+roots} & number of expected roots \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+1} & expected root \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+2} & expected root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 1 if the check is passed 
+\end{DoxyReturn}
+\mbox{\label{squaresolver__add_8cpp_a3bdf1f943e4db7f18d047e80da1a8663}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!compare@{compare}}
+\index{compare@{compare}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{compare()}
+{\footnotesize\ttfamily bool compare (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+compares two numbers for equality 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & coefficient equation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+outputs true if the comparison is true 
+\end{DoxyReturn}
+\mbox{\label{squaresolver__add_8cpp_adf467d838680aed3ec508725a86bdade}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!input\_coefficients@{input\_coefficients}}
+\index{input\_coefficients@{input\_coefficients}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{input\_coefficients()}
+{\footnotesize\ttfamily double input\+\_\+coefficients (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+gets the coefficients of the equation 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & adress coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & adress coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & adress coefficient equation \\
+\hline
+\end{DoxyParams}
+\mbox{\label{squaresolver__add_8cpp_a672e354ee77f4bfc9b4a661b3f70937f}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!line\_solve@{line\_solve}}
+\index{line\_solve@{line\_solve}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{line\_solve()}
+{\footnotesize\ttfamily double line\+\_\+solve (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{\textbf{ equation} $\ast$}]{t }\end{DoxyParamCaption})}
+
+solves the linear case of the quadratic equation 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em equation} & gets the structure \\
+\hline
+\end{DoxyParams}
+\mbox{\label{squaresolver__add_8cpp_a7f7545f53afacfc6a2454277a645052a}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!output\_solutions@{output\_solutions}}
+\index{output\_solutions@{output\_solutions}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{output\_solutions()}
+{\footnotesize\ttfamily void output\+\_\+solutions (\begin{DoxyParamCaption}\item[{\textbf{ equation}}]{square }\end{DoxyParamCaption})}
+
+outputs all cases of solving the quadratic equation 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em equation} & gets the structure \\
+\hline
+\end{DoxyParams}
+\mbox{\label{squaresolver__add_8cpp_a5d7ba333d367d4e039aac780f7ceb63d}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!solve@{solve}}
+\index{solve@{solve}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{solve()}
+{\footnotesize\ttfamily void solve (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{\textbf{ equation} $\ast$}]{t }\end{DoxyParamCaption})}
+
+solves the quadratic \doxyref{equation(considering all cases)}{p.}{structequation} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em equation} & gets the structure \\
+\hline
+\end{DoxyParams}
+\mbox{\label{squaresolver__add_8cpp_a7d9f6d498ffaa21252fa80586e42958a}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!square\_solve@{square\_solve}}
+\index{square\_solve@{square\_solve}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{square\_solve()}
+{\footnotesize\ttfamily void square\+\_\+solve (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{\textbf{ equation} $\ast$}]{t }\end{DoxyParamCaption})}
+
+solves the classical quadratic equation 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em equation} & gets the structure \\
+\hline
+\end{DoxyParams}
+\mbox{\label{squaresolver__add_8cpp_a7ab82a59d3c5642d7b9c0c48a78935d4}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!test\_solve\_square@{test\_solve\_square}}
+\index{test\_solve\_square@{test\_solve\_square}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{test\_solve\_square()}
+{\footnotesize\ttfamily void test\+\_\+solve\+\_\+square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+tests the function of solving a quadratic equation 
+
+\mbox{\label{squaresolver__add_8cpp_ad1464581cfc24bc1016408c6f3d4d37a}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!test\_solve\_square\_add@{test\_solve\_square\_add}}
+\index{test\_solve\_square\_add@{test\_solve\_square\_add}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{test\_solve\_square\_add()}
+{\footnotesize\ttfamily void test\+\_\+solve\+\_\+square\+\_\+add (\begin{DoxyParamCaption}\item[{\textbf{ equation}}]{square,  }\item[{int}]{num\+\_\+roots,  }\item[{double}]{x\+\_\+1,  }\item[{double}]{x\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+displays an error message 
+
+creates unit tests \mbox{\label{squaresolver__add_8cpp_aa313a8e38e5d0b376091696f5586f7b7}} 
+\index{squaresolver\_add.cpp@{squaresolver\_add.cpp}!true\_coefficients@{true\_coefficients}}
+\index{true\_coefficients@{true\_coefficients}!squaresolver\_add.cpp@{squaresolver\_add.cpp}}
+\doxysubsubsection{true\_coefficients()}
+{\footnotesize\ttfamily int true\+\_\+coefficients (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c }\end{DoxyParamCaption})}
+
+checks the correctness of the entered coefficients 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & coefficient equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & coefficient equation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 1 if the coefficients are correct and 0 if the user wants to change the values 
+\end{DoxyReturn}
