@@ -2,7 +2,7 @@
 # solving the quadratic equation
 ---
 ### documentation
-[пример][id]: 
+[пример][id]: https://github.com/lizz-kuzz/SquareSolver/blob/doxygen-documentation/doc/html/main_8cpp.html
 
 ### using the program
 You need to enter into the console the value of the coefficients a, b and c, respectively, of the quadratic equation of the form:
