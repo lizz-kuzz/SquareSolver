@@ -27,4 +27,6 @@ void input_coeff(double *a, double *b, double *c);
 void output_solutions(equation square);
 
 void clear_input_buff();
+
 #endif
+
