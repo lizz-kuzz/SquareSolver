@@ -1,4 +1,4 @@
-# SquareSolver
+# square_solver
 # solving the quadratic equation
 ---
 ### documentation
